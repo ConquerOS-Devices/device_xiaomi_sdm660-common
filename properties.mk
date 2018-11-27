@@ -131,6 +131,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.renderer=skiagl \
     debug.sf.early_phase_offset_ns=500000 \
     debug.sf.early_app_phase_offset_ns=500000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000 \
