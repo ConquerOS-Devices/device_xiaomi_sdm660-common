@@ -169,6 +169,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
+# Power Saver
+PRODUCT_PROPERTY_OVERRIDES += \
+    power.saving.mode=1 \
+    pm.sleep_mode=1
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
@@ -181,7 +186,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
     ro.telephony.default_network=22,22 \
-    ro.vendor.use_data_netmgrd=true
+    ro.vendor.use_data_netmgrd=true \
+    ro.vold.umsdirtyratio=20 \
+    ro.ril.disable.power.collapse=0
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
