@@ -324,7 +324,9 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
+    power.xiaomi-sdm660 \
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service \
     vendor.qti.hardware.perf@2.0.vendor
 
 PRODUCT_COPY_FILES += \
