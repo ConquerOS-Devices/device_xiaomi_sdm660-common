@@ -326,8 +326,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.xiaomi-sdm660 \
     android.hardware.power@1.0-impl \
-    android.hardware.power@1.0-service \
-    vendor.qti.hardware.perf@2.0.vendor
+    android.hardware.power@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf
