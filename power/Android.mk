@@ -13,11 +13,8 @@ LOCAL_HEADER_LIBRARIES += libhardware_headers
 LOCAL_SRC_FILES := power.c metadata-parser.c utils.c list.c hint-data.c powerhintparser.c
 LOCAL_C_INCLUDES := external/libxml2/include \
                     external/icu/icu4c/source/common
-LOCAL_SRC_FILES += power.xiaomi-sdm660.c
 
-ifneq ($(TARGET_TAP_TO_WAKE_NODE),)
-    LOCAL_CFLAGS += -DTAP_TO_WAKE_NODE=\"$(TARGET_TAP_TO_WAKE_NODE)\"
-endif
+LOCAL_SRC_FILES += power.xiaomi-sdm660.c
 
 ifeq ($(TARGET_USES_INTERACTION_BOOST),true)
     LOCAL_CFLAGS += -DINTERACTION_BOOST
