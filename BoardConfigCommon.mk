@@ -115,6 +115,9 @@ ifneq ($(BOARD_HAVE_IR), false)
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/manifests/manifest-ir.xml
 endif
 
+# LMKD stats logging
+TARGET_LMKD_STATS_LOG := true
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
