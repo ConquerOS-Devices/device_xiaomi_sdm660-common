@@ -153,7 +153,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.wfc_avail_ovr=1
 
 # IORap
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.iorapd.enable=true \
     iorapd.perfetto.enable=true \
     iorapd.readahead.enable=true
