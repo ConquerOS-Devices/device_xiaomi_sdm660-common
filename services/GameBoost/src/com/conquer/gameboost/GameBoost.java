@@ -15,7 +15,6 @@
  */
 package com.conquer.gameboost;
 
-import android.graphics.drawable.Icon;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import android.os.SystemProperties;
@@ -39,25 +38,23 @@ public class GameBoost extends TileService {
     @Override
     public void onClick() {
         super.onClick();
-        if (mBoostDetection) {
-        SystemProperties.set(GAMEBOOST_ENABLED, "off");
-        mBoostDetection = false;
-        Log.d("GameBoost", "Stopped GameBoost");
+        if (mGamingModeDetection) {
+        SystemProperties.set(BASIC_BASIC_GAMINGMODE_ENABLED, "off");
+        mGamingModeDetection = false;
+        Log.d("BasicGamingMode", "Stopped BasicGamingMode");
         } else {
-        SystemProperties.set(GAMEBOOST_ENABLED, "on");
-        mBoostDetection = true;
-        Log.d("GameBoost", "Starting GameBoost");
-        Toast.makeText(GameBoost.this, getString(R.string.toast), Toast.LENGTH_LONG).show();
+        SystemProperties.set(BASIC_BASIC_GAMINGMODE_ENABLED, "on");
+        mGamingModeDetection = true;
+        Log.d("BasicGamingMode", "Starting BasicGamingMode");
+        Toast.makeText(BasicGamingMode.this, getString(R.string.basicgamingmode_toast), Toast.LENGTH_LONG).show();
         }
         refresh();
     }
 
     private void refresh() {
-        if (mBoostDetection) {
-            getQsTile().setIcon(Icon.createWithResource(this, R.drawable.gameboost_on));
+        if (mGamingModeDetection) {
             getQsTile().setState(Tile.STATE_ACTIVE);
         } else {
-            getQsTile().setIcon(Icon.createWithResource(this, R.drawable.gameboost_off));
             getQsTile().setState(Tile.STATE_INACTIVE);
         }
         getQsTile().updateTile();

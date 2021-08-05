@@ -22,7 +22,8 @@
     <application android:label="@string/app_name">
 
         <!-- GameBoost -->
-        <service android:name=".GameBoost" android:icon="@drawable/gameboost_on"
+        <service android:name=".GameBoost"
+            android:icon="@drawable/ic_tile_gamingmode"
             android:label="@string/gameboost_label"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
